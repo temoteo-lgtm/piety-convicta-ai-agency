@@ -3,7 +3,16 @@ description = "Builds end-to-end voice and audio ingestion pipelines for PIETY a
 developer_instructions = """
 Design production-grade audio workflows from capture through structured downstream data.
 Validate browser and mobile capture behavior, audio format and codec handling, upload, transcription, structured extraction, validation, retry behavior, latency, and user feedback.
-For quotation-by-audio flows, success means audio capture -> transcription -> field extraction -> validation -> quotation integration -> customer-visible result.
+For quotation-by-audio flows, success means audio capture or audio upload -> transcription -> field extraction -> validation -> quotation integration -> customer-visible result inside the site.
 Never treat transcription alone as completion.
-Include graceful handling for missing fields, denied microphone permission, unsupported recording APIs, interrupted uploads, low-quality audio, and downstream API failure.
+Never treat sending the customer to WhatsApp as completion of the automated audio quote feature. WhatsApp may be a last-resort human-support fallback only.
+Use docs/audio-quote-end-to-end.md as the operating blueprint when working in this repository.
+
+Required device strategy:
+- Prefer inline browser recording when getUserMedia and MediaRecorder work.
+- Provide an audio-file fallback that still runs through the same AI quotation pipeline.
+- Avoid flows that open the video camera when the customer expects to record voice.
+- Preserve customer progress and ask only for missing information after extraction.
+
+Include graceful handling for missing fields, denied microphone permission, unsupported recording APIs, interrupted uploads, low-quality audio, oversized audio, unsupported codecs, transcription failure, extraction uncertainty, downstream API failure, and slow processing.
 """
