@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pietyseguros.com.br/schemas/audio-quote.schema.json",
+  "title": "PIETY Audio Quote Extraction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "city",
+    "state",
+    "modality",
+    "company_type",
+    "lives_count",
+    "ages",
+    "has_cnpj",
+    "current_plan",
+    "desired_coverage",
+    "contact_name",
+    "phone",
+    "missing_fields",
+    "confidence",
+    "transcript"
+  ],
+  "properties": {
+    "city": {
+      "type": ["string", "null"],
+      "description": "Customer city for quotation."
+    },
+    "state": {
+      "type": ["string", "null"],
+      "description": "Brazilian state/UF, preferably two-letter UF when available."
+    },
+    "modality": {
+      "type": ["string", "null"],
+      "enum": ["pessoa_fisica", "empresa_pme", "adesao", null]
+    },
+    "company_type": {
+      "type": ["string", "null"],
+      "description": "Examples: MEI, empresa_com_cnpj, profissional_liberal, association category."
+    },
+    "lives_count": {
+      "type": ["integer", "null"],
+      "minimum": 1
+    },
+    "ages": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 120
+      }
+    },
+    "has_cnpj": {
+      "type": ["boolean", "null"]
+    },
+    "current_plan": {
+      "type": ["string", "null"]
+    },
+    "desired_coverage": {
+      "type": ["string", "null"],
+      "description": "Desired coverage or preference, such as regional, national, hospital, dental, coparticipation preference."
+    },
+    "contact_name": {
+      "type": ["string", "null"]
+    },
+    "phone": {
+      "type": ["string", "null"]
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "city",
+          "state",
+          "modality",
+          "company_type",
+          "lives_count",
+          "ages",
+          "has_cnpj",
+          "contact_name",
+          "phone"
+        ]
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "transcript": {
+      "type": "string"
+    }
+  }
+}
