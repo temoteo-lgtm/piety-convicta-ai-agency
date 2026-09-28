@@ -1,0 +1,22 @@
+version: 1
+routes:
+  audio_quote:
+    agents: [workflow-architect, voice-ai-integration-engineer, ai-engineer, backend-architect, api-tester, evidence-collector, reality-checker]
+  insurance_api:
+    agents: [insurance-api-integration-specialist, backend-architect, api-tester, secrets-credential-engineer, evidence-collector, reality-checker]
+  product_feature:
+    agents: [product-manager, workflow-architect, frontend-developer, backend-architect, api-tester, reality-checker]
+  google_ads:
+    agents: [ppc-campaign-strategist, tracking-measurement-specialist, ad-creative-strategist, analytics-reporter]
+  paid_social:
+    agents: [paid-social-strategist, tracking-measurement-specialist, ad-creative-strategist, analytics-reporter]
+  campaign_audit:
+    agents: [paid-media-auditor, tracking-measurement-specialist, ppc-campaign-strategist, paid-social-strategist, analytics-reporter]
+  brand_creative:
+    agents: [brand-guardian, ad-creative-strategist]
+  insurance_business:
+    agents: [piety-insurance-specialist, offer-lead-gen-strategist]
+  health_business:
+    agents: [piety-health-specialist-br, offer-lead-gen-strategist, tracking-measurement-specialist]
+  real_estate_operations:
+    agents: [convicta-property-management, workflow-architect]
