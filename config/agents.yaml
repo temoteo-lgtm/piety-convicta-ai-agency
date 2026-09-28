@@ -1,0 +1,27 @@
+version: 1
+entrypoint: piety-convicta-orchestrator
+agents:
+  - piety-convicta-orchestrator
+  - product-manager
+  - workflow-architect
+  - backend-architect
+  - frontend-developer
+  - ai-engineer
+  - voice-ai-integration-engineer
+  - mcp-builder
+  - api-tester
+  - reality-checker
+  - evidence-collector
+  - secrets-credential-engineer
+  - ppc-campaign-strategist
+  - paid-social-strategist
+  - tracking-measurement-specialist
+  - ad-creative-strategist
+  - paid-media-auditor
+  - analytics-reporter
+  - offer-lead-gen-strategist
+  - brand-guardian
+  - piety-insurance-specialist
+  - piety-health-specialist-br
+  - convicta-property-management
+  - insurance-api-integration-specialist
