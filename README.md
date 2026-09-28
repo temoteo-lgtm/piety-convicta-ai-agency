@@ -19,8 +19,13 @@ The PIETY audio quotation goal is not to send audio to WhatsApp. The intended jo
 Start here:
 - `docs/audio-quote-end-to-end.md` — required product flow, backend contract, AI extraction schema, fallback strategy, and evidence needed before DONE.
 - `docs/audio-quote-implementation-plan.md` — implementation sequence and acceptance criteria.
+- `docs/audio-quote-minimum-mvp.md` — smallest acceptable launch scope for the audio quote feature.
 - `config/audio-quote.schema.json` — structured output schema for AI extraction.
 - `docs/lovable-audio-quote-implementation-prompt.md` — prompt ready to apply in the Lovable/site project.
+
+Validation:
+- `docs/audio-quote-test-matrix.md` — desktop, Android, iPhone, fallback, error, and missing-data test matrix.
+- `docs/audio-quote-evidence-template.md` — evidence template for each validation run.
 
 ## Selected agents
 - `docs/selected-agents.md` — focused PIETY / Convicta roster and recommended teams.
