@@ -11,3 +11,5 @@ rules:
     rule: Implementation must pass functional validation and Reality Checker before DONE.
   - id: evidence
     rule: Record environment, test case, expected result, actual result, and implementation reference.
+  - id: audio-quote
+    rule: Audio quotation is DONE only when a customer can record or upload audio, the AI extracts quote fields, required data is validated, and a customer-visible quotation result or focused missing-data prompt appears inside the site.
