@@ -1,0 +1,13 @@
+version: 1
+status_model: [PLANNED, IN_PROGRESS, NEEDS_WORK, BLOCKED, VERIFIED, DONE]
+rules:
+  - id: end-to-end
+    rule: DONE requires the requested user journey to work end-to-end with evidence.
+  - id: implementation-proof
+    rule: A commit or deployment alone does not prove that a feature works.
+  - id: api-resilience
+    rule: External integrations require error handling, timeouts, retry strategy, and observable logs.
+  - id: qa
+    rule: Implementation must pass functional validation and Reality Checker before DONE.
+  - id: evidence
+    rule: Record environment, test case, expected result, actual result, and implementation reference.
